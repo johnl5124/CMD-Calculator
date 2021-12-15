@@ -13,6 +13,16 @@ int subtraction(x, y)
     return x - y;
 }
 
+int multiplication(x, y)
+{
+    return x * y;
+}
+
+int division(x, y)
+{
+    return x / y;
+}
+
 int main()
 {
     int user_input, answer, x, y, counter = 1;
@@ -46,9 +56,21 @@ int main()
             break;
             case 3:
                 printf("You have selected Multiplication \n");
+                printf("Please enter a number: ");
+                scanf("%d", &x);
+                printf("Please enter a number: ");
+                scanf("%d", &y);
+                answer = multiplication(x, y);
+                printf("Answer: %d \n", answer);
             break;
             case 4:
-                printf("You have selected Division \n");  
+                printf("You have selected Division \n"); 
+                printf("Please enter a number: ");
+                scanf("%d", &x);
+                printf("Please enter a number: ");
+                scanf("%d", &y);
+                answer = division(x, y);
+                printf("Answer: %d \n", answer); 
             break;
             case 5:
                 printf("Thankyou! Exiting...");
@@ -59,6 +81,5 @@ int main()
         // below is casting an int to 
         scanf("%d", &user_input);
     }
-
 }
 
